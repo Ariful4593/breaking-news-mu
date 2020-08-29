@@ -10,26 +10,32 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: "100%",
+    padding: 10,
+    borderBottom: "2px solid lightgray",
+    
+    top: 20,
   },
   media: {
-    height: 140,
+    height: 240,
+    
   },
 });
 const News = (props) => {
     const {title, description, urlToImage} = props.article
     const classes = useStyles();
     return (
-        <div>
+        <div borderBottom={1}>
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
                         className={classes.media}
                         image={urlToImage}
                         title="Contemplative Reptile"
+                        
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
+                        <Typography gutterBottom variant="h5" component="h5">
                             {title}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
